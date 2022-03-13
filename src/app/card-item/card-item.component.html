@@ -1,13 +1,33 @@
-<mat-card class="example-card">
-    <mat-card-title>{{data_.TemplateName}}</mat-card-title>
-    <mat-card-content>
-        <p>This card has divider and indeterminate progress as footer</p>
-        <!-- <p>{{ longText }}</p> -->
-    </mat-card-content>
+<mat-card class="example-card" style="margin: 1em; border-top: 5px solid green">
+    <i [ngClass]="{
+        'fa-solid fa-circle-check fa-2x': data_.SURVEY_STATUS_EN === 'Published'
+      }"></i>
+    <i [ngClass]="{
+        'fas fa-clock fa-2x': data_.SURVEY_STATUS_EN === 'Expired'
+      }"></i>
+    <i [ngClass]="{
+        'fa-solid fa-circle-check fa-2x': data_.SURVEY_STATUS_EN === 'Closed'
+      }"></i>
+
+    <br />
+    <mat-card-title>{{ data_.TemplateName }}</mat-card-title>
+    <mat-card-content> </mat-card-content>
     <mat-divider inset></mat-divider>
     <mat-card-actions>
-        <mat-card-subtitle>{{data_.SurveyPeriods}}</mat-card-subtitle>
+        <mat-card-subtitle *ngFor="let date_ of data_.SurveyPeriods">
+            <span *ngIf="data_.SurveyPeriods.length == 1">
+          {{ date_.START_DATE | date }} - {{ date_.END_DATE | date }}</span
+        >
+      </mat-card-subtitle>
+  
+      <mat-form-field appearance="fill" *ngIf="data_.SurveyPeriods?.length > 1">
+        <mat-label>Select Period</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let date_ of data_.SurveyPeriods">
+            {{ date_.START_DATE | date }} - {{ date_.END_DATE | date }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
     </mat-card-actions>
-    <mat-card-footer>
-    </mat-card-footer>
-</mat-card>
+    <mat-card-footer> </mat-card-footer>
+  </mat-card>

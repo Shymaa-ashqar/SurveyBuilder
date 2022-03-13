@@ -14,7 +14,9 @@ import { DataService } from './services/data.service';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
-
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
@@ -34,7 +36,10 @@ import {MatDividerModule} from '@angular/material/divider';
     MatTabsModule,
     MatCardModule,
     MatButtonModule,
-    MatDividerModule
+    MatDividerModule,
+    MatGridListModule,
+    MatSelectModule,
+    MatInputModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

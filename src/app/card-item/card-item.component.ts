@@ -7,10 +7,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardItemComponent implements OnInit {
 
-  @Input() data_:any;
-  constructor() { }
+  @Input()  data_:any;
+   
+  
+
+  constructor() {
+   }
 
   ngOnInit(): void {
+   this.data_.SurveyPeriods=JSON.parse( this.data_.SurveyPeriods);
+  //  console.log(typeof(this.data_.SurveyPeriods))
   }
-
+ 
 }
