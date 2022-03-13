@@ -1,16 +1,18 @@
-<mat-card class="example-card" style="margin: 1em; border-top: 5px solid green">
+<mat-card class="example-card" style="padding: 0;margin:1em; border-top: 5px solid #02ca98">
+    <label class="radio-card">
+      <input type="radio" name="card" class="radio-button" [value]="data_.SRV_ID" (click)="SelectedSurvey(data_,$event.target)" >
     <i [ngClass]="{
-        'fa-solid fa-circle-check fa-2x': data_.SURVEY_STATUS_EN === 'Published'
-      }"></i>
+        'fa-regular fa-circle-check fa-2x': data_.SURVEY_STATUS_EN === 'Published'
+      }" style="color: #02ca98;" #icon></i>
     <i [ngClass]="{
-        'fas fa-clock fa-2x': data_.SURVEY_STATUS_EN === 'Expired'
-      }"></i>
+        'fa-regular fa-clock fa-2x': data_.SURVEY_STATUS_EN === 'Expired'
+      }"  style="color: #02ca98;" #icon></i>
     <i [ngClass]="{
-        'fa-solid fa-circle-check fa-2x': data_.SURVEY_STATUS_EN === 'Closed'
-      }"></i>
+        'fa-regular fa-circle-check fa-2x': data_.SURVEY_STATUS_EN === 'Closed'
+      }"  style="color: #02ca98;" #icon></i>
 
     <br />
-    <mat-card-title>{{ data_.TemplateName }}</mat-card-title>
+    <mat-card-title class="test">{{ data_.TemplateName }}</mat-card-title>
     <mat-card-content> </mat-card-content>
     <mat-divider inset></mat-divider>
     <mat-card-actions>
@@ -29,5 +31,5 @@
         </mat-select>
       </mat-form-field>
     </mat-card-actions>
-    <mat-card-footer> </mat-card-footer>
-  </mat-card>
+  </label>
+</mat-card>

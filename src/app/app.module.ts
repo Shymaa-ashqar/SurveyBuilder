@@ -17,6 +17,8 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import {MatInputModule} from '@angular/material/input';
     MatDividerModule,
     MatGridListModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    MatDialogModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

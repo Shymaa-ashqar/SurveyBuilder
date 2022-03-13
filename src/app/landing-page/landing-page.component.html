@@ -1,20 +1,14 @@
-<div class="row" style="display: grid; grid-template-columns: 70% 30%">
+<div class="row">
     <mat-tab-group>
-        <mat-tab label="Published"> Content 1 </mat-tab>
+        <mat-tab label="Published">
+            <app-cards-list></app-cards-list>
+        </mat-tab>
         <mat-tab label="Expired"> Content 2 </mat-tab>
         <mat-tab label="Closed"> Content 3 </mat-tab>
-        <mat-tab label="All Surveys"> Content 4 </mat-tab>
+        <mat-tab label="All Surveys">
+            <app-cards-list></app-cards-list>
+        </mat-tab>
     </mat-tab-group>
 
-    <div class="example-button-row row" style="display: flex">
-        <button mat-stroked-button>Go to Dashboard</button>
-        <form class="example-form">
-            <mat-form-field class="example-full-width" appearance="fill">
-                <input matInput placeholder="search survey name" />
-            </mat-form-field>
-        </form>
-        <button mat-stroked-button>Filter</button>
-    </div>
-</div>
 
-<app-cards-list></app-cards-list>
+</div>
