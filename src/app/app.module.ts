@@ -20,6 +20,7 @@ import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
+import {MatTableModule} from '@angular/material/table';
 
 
 
@@ -46,7 +47,8 @@ import { DialogComponent } from './dialog/dialog.component';
     MatSelectModule,
     MatInputModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTableModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

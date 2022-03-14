@@ -22,11 +22,15 @@ export class CardItemComponent implements OnInit {
    this.data_.SurveyPeriods=JSON.parse( this.data_.SurveyPeriods);
   //  console.log(typeof(this.data_.SurveyPeriods))
   }
-  SelectedSurvey(data:any,item:any){     
+  SelectedSurvey(data:any,item:any){  
+    // item.checked=!item.checked; 
+    if(item.checked==true){
       this.dialogSurvey=data;
+    }  else{
+      this.dialogSurvey=null;
+    }
       console.log(this.dialogSurvey)
-      this.flag=item.checked;
       this.dialogDataOutput.emit(this.dialogSurvey);
- 
+     
 }
 }

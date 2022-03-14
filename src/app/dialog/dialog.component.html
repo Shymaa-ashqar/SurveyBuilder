@@ -1,1 +1,12 @@
-<p>dialog works!</p>
+<h1 mat-dialog-title>Survey</h1>
+<div mat-dialog-content>
+    <p>data to be send back</p>
+    <mat-form-field appearance="fill">
+        <mat-label>DATA</mat-label>
+        <!-- <input matInput [value]="{surveyData}"> -->
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="close()">No thanks</button>
+    <button mat-button (click)="save()">Ok</button>
+</div>
