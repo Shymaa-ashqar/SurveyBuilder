@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { DataService } from '../services/data.service';
+
 
 @Component({
   selector: 'app-cards-list',
@@ -9,7 +11,7 @@ import { DataService } from '../services/data.service';
 export class CardsListComponent implements OnInit {
 
   fetchedData!: any[];
-  constructor(private data: DataService) { }
+  constructor(private data: DataService,private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.data.sendGetRequest().subscribe((res:any)=>{
@@ -23,5 +25,14 @@ export class CardsListComponent implements OnInit {
       
 
   }
+  openDialog() {
+
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+
+    // this.dialog.open(DialogComponent, dialogConfig);
+}
 
 }

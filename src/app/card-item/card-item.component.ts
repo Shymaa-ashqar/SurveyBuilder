@@ -1,4 +1,5 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-card-item',
@@ -9,10 +10,10 @@ export class CardItemComponent implements OnInit {
 
   @ViewChild('icon')btn!: ElementRef;
   @Input()  data_:any;
+  @Output() dialogDataOutput = new EventEmitter();
   flag:boolean=false;
-  dialogSurvey:any;
+  dialogSurvey:any=null;
    
-  
 
   constructor() {
    }
@@ -22,13 +23,10 @@ export class CardItemComponent implements OnInit {
   //  console.log(typeof(this.data_.SurveyPeriods))
   }
   SelectedSurvey(data:any,item:any){     
-      console.log(item.value);
-      console.log(item.checked)
-      // console.log(data)
       this.dialogSurvey=data;
       console.log(this.dialogSurvey)
-      this.btn.nativeElement.classList.toggle("fa-solid"); 
       this.flag=item.checked;
+      this.dialogDataOutput.emit(this.dialogSurvey);
  
 }
 }

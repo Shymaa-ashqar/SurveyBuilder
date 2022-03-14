@@ -19,6 +19,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
+import { DialogComponent } from './dialog/dialog.component';
+
 
 
 @NgModule({
@@ -28,6 +30,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     LandingPageComponent,
     CardsListComponent,
     CardItemComponent,
+    DialogComponent,
 
   ],
   imports: [

@@ -1,5 +1,6 @@
 <div class="example-button-row row" style="display: flex">
-    <button mat-stroked-button style="background-color: #02ca98;color: white;" [disabled]="true">Go to Dashboard</button>
+    <button mat-stroked-button>Go to Dashboard</button>
+
     <!-- <form class="example-form">
         <mat-form-field class="example-full-width" appearance="fill">
             <input matInput placeholder="search survey name" />
@@ -7,7 +8,7 @@
     </form> -->
     <button mat-stroked-button>Filter</button>
 </div>
-<div class=" card-list-container mt-5" style="display: grid; grid-template-columns: auto auto auto auto;margin: 5em;">
+<div class="card-list-container mt-5" style="display: grid; grid-template-columns: auto auto auto auto; margin: 5em">
     <app-card-item *ngFor="let d of fetchedData" [data_]="d"></app-card-item>
 </div>
 <button (click)="test()">Console</button>
