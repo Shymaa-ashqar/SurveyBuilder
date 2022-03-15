@@ -23,7 +23,7 @@
 </mat-form-field>
 
 <div class="mat-elevation-z8" *ngIf="ViewValue=='list'">
-    <table mat-table [dataSource]="fetchedData" matSort style="width: 100%;">
+    <table mat-table [dataSource]="dataSource" matSort style="width: 100%;">
 
         <!--ID/Radio Button -->
         <ng-container matColumnDef="radio">
@@ -91,7 +91,8 @@
         </tr>
     </table>
 
-    <!-- <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator> -->
+    <mat-paginator [length]="fetchedData.length" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page">
+    </mat-paginator>
 </div>
 
 
