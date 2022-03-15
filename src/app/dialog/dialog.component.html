@@ -3,7 +3,7 @@
     <p>data to be send back</p>
     <mat-form-field appearance="fill">
         <mat-label>DATA</mat-label>
-        <!-- <input matInput [value]="{surveyData}"> -->
+        <input matInput [(ngModel)]="data" pattern="[A-Za-z]{4}" />
     </mat-form-field>
 </div>
 <div mat-dialog-actions>

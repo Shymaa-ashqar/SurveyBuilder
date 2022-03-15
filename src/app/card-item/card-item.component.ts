@@ -24,10 +24,13 @@ export class CardItemComponent implements OnInit {
   }
   SelectedSurvey(data:any,item:any){  
     // item.checked=!item.checked; 
-    if(item.checked==true){
-      this.dialogSurvey=data;
-    }  else{
+    if(this.flag==true){
       this.dialogSurvey=null;
+      this.flag=false;
+    }  
+    else{
+      this.dialogSurvey=data;
+      this.flag=true;
     }
       console.log(this.dialogSurvey)
       this.dialogDataOutput.emit(this.dialogSurvey);

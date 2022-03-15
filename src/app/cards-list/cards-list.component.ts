@@ -35,15 +35,12 @@ export class CardsListComponent implements OnInit {
     this.dialogReceivedObject=receivedData
      }
   openDialog() {
-
     const dialogConfig = new MatDialogConfig();
-
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
 
-    dialogConfig.data = {
-        surveyData:this.dialogReceivedObject
-    };
+    dialogConfig.data =this.dialogReceivedObject.TemplateName
+   
 
     this.dialog.open(DialogComponent, dialogConfig);
 }

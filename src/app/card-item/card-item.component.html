@@ -1,7 +1,5 @@
 <mat-card class="example-card" style="padding: 0; margin: 1em; border-top: 5px solid #02ca98">
     <label class="radio-card">
-
-      <!-- radio button to choose only one card -->
     <input
       type="radio"
       name="card"
@@ -15,11 +13,11 @@
       [ngClass]="
         data_.SURVEY_STATUS_EN == 'Published' && radioBtn.checked
           ? 'fa-solid fa-circle-check fa-2x'
-          : data_.SURVEY_STATUS_EN == 'Published' && !radioBtn.checked
+          : data_.SURVEY_STATUS_EN == 'Published'
           ? 'fa-regular fa-circle-check fa-2x'
           : data_.SURVEY_STATUS_EN == 'Expired' && radioBtn.checked
           ? 'fa-solid fa-clock fa-2x'
-          : data_.SURVEY_STATUS_EN == 'Expired' && !radioBtn.checked
+          : data_.SURVEY_STATUS_EN == 'Expired'
           ? 'fa-regular fa-clock fa-2x'
           : ''
       "

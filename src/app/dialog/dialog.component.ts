@@ -11,12 +11,13 @@ import { CardsListComponent } from '../cards-list/cards-list.component';
 export class DialogComponent implements OnInit {
   form!: FormGroup;
 
-  constructor(    private dialogRef: MatDialogRef<DialogComponent>,@Inject(MAT_DIALOG_DATA) public data: CardsListComponent) { }
+  constructor(    private dialogRef: MatDialogRef<DialogComponent>,@Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit(): void {
+    console.log(this.data)
   }
   save() {
-    this.dialogRef.close(this.form.value);
+    // this.dialogRef.close(this.form.value);
 }
 
 close() {
