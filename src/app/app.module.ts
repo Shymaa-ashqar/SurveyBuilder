@@ -21,6 +21,8 @@ import { FormsModule } from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
 import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
@@ -48,7 +50,9 @@ import {MatTableModule} from '@angular/material/table';
     MatInputModule,
     FormsModule,
     MatDialogModule,
-    MatTableModule
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
